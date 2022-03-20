@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" class="webmadewell">
+<head>
+  <meta charset="UTF-8">
+  <title>Equipo D</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="sample-header">
+  <div class="sample-header-section">
+    <h1>Glaciares y su relieve</h1>
+    <h2>Equipo D</h2>
+  </div>
+</div>
+<div class="sample-section-wrap">
+  <div class="sample-section">
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+      quis, sem. Nulla consequat massa quis enim. </p>
+
+    <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
+      vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
+      ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. </p>
+      <model-viewer
+      id="hotspot-camera-view-demo"
+      src="/Ejemplo Exposicion2.glb"
+      ar
+      camera-controls
+      modes="webxr scene-viewer quick-look"
+      camera-target="0.1m 0.6m 0.005m"
+      ar-modes="webxr scene-viewer quick-look"
+    >
+      <button
+        class="Hotspot"
+        slot="hotspot-1"
+        data-position="0.11993602314598723m 0.6803725517372621m -0.19606451696591407m"
+        data-normal="-0.062360722361874864m 0.7715059871847636m 0.733158473089138m"
+        data-orbit="5.711166deg 82.3035deg 0.04335197m"
+        data-target="0.11993602314598723m 0.6803725517372621m -0.19606451696591407m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">Horn</div>
+      </button>
+
+      <button
+        class="Hotspot"
+        slot="hotspot-2"
+        data-position="-0.2178714090764498m 0.6599873850944702m -0.1836318750074366m"
+        data-normal="-0.08406946786223762m 0.9702440517739723m -0.2270656393437495m"
+        data-visibility-attribute="visible"
+        data-orbit="-87.711166deg 80.3035deg 0.00001m"
+        data-target="-0.2178714090764498m 0.6399873850944702m -0.1836318750074366m"
+      >
+        <div class="HotspotAnnotation">Circos</div>
+      </button>
+
+      <button
+        class="Hotspot"
+        slot="hotspot-3"
+        data-position="0.2676669289902488m 0.6487278012260653m 0.18952544901789364m"
+        data-normal="1m 1m 1m"
+        data-visibility-attribute="visible"
+        data-orbit="-80deg 80deg 0m"
+        data-target="0.2676669289902488m 0.6487278012260653m 0.18952544901789364m"
+      >
+        <div class="HotspotAnnotation">Arista</div>
+      </button>
+
+      <button
+        class="Hotspot"
+        slot="hotspot-4"
+        data-position="0.090089424856955944m 0.6048886374763485m -0.09980392225954354m"
+        data-normal="0.07012010806250377m 0.7016442790278827m 0.709068738665544m"
+        data-visibility-attribute="visible"
+        data-target="0.050089424856955944m 0.6048886374763485m -0.09980392225954354m"
+        data-orbit="-10deg 80deg 0m"
+      >
+        <div class="HotspotAnnotation">Estrías</div>
+      </button>
+
+      <button
+        class="Hotspot"
+        slot="hotspot-5"
+        data-position="0.49860167310821063m 0.5675889108833243m -0.0038514233762589334m"
+        data-normal="0.034790056865850114m 0.9993808672955508m 0.005247287572062099m"
+        data-visibility-attribute="visible"
+        data-target="0.49860167310821063m 0.5675889108833243m -0.0038514233762589334m"
+        data-orbit="-90deg 80deg 0m"
+      >
+        <div class="HotspotAnnotation">Morrenas</div>
+      </button>
+
+
+      <script type="module">
+        const modelViewer = document.querySelector(
+          "#hotspot-camera-view-demo"
+        );
+        const annotationClicked = (annotation) => {
+          let dataset = annotation.dataset;
+          modelViewer.cameraTarget = dataset.target;
+          modelViewer.cameraOrbit = dataset.orbit;
+        };
+
+        modelViewer.querySelectorAll("button").forEach((hotspot) => {
+          console.log("hello hotspot", hotspot);
+          hotspot.addEventListener("click", () => annotationClicked(hotspot));
+        });
+      </script>
+    </model-viewer>
+
+    <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut
+      libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. </p>
+
+    <p>Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut,
+      mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+
+    <p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet
+      nec, imperdiet iaculis, ipsum. </p>
+
+    <p>Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+      quis, sem. Nulla consequat massa quis enim. </p>
+
+    <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
+      vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
+      ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. </p>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-latest.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

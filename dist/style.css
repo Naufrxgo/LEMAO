@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+.webmadewell {
+  background-color: white;
+}
+body {
+  margin: 0;
+}
+.sample-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-image: url("http://webmadewell.com/wp-content/uploads/2018/01/img-bg-sample-parallax-header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.sample-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: MidnightBlue;
+  opacity: 0.3;
+}
+.sample-header-section {
+  position: relative;
+  padding: 15% 0 10%;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Varela Round', sans-serif;
+}
+h1 {
+  font-weight: 900;
+}
+h2 {
+  font-weight: 400;
+}
+p{
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+}
+.sample-section-wrap {
+  position: relative;
+  background-color: white;
+}
+.sample-section {
+  position: relative;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+
+model-viewer {
+  width: 650px;
+  height: 400px;
+  background-color: #111111;
+  --poster-color: #ffffff00;
+  border-radius: 10em;
+  
+}
+
+.flex-container{
+  display: flex;
+  text-align: justify;
+  
+}
+
+button {
+  padding: 1em 1em;
+  font-size: 7px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+ }
+ 
+ button:hover {
+  background-color: #2ee5cd;
+  box-shadow: 0px 15px 20px rgba(46, 208, 229, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+ }
+ 
+ button:active {
+  transform: translateY(-1px);
+ }
